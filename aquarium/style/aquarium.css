@@ -1,0 +1,434 @@
+﻿@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+html,body {height: 100vh;}
+body {
+    overflow: hidden;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    margin: 0;
+    /* background-color: #C9E7E5; */
+    background: #7ab1ff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #7ab1ff 1%, #96dcf7 54%, #c9e1ea 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #7ab1ff 1%,#96dcf7 54%,#c9e1ea 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #7ab1ff 1%,#96dcf7 54%,#c9e1ea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7ab1ff', endColorstr='#c9e1ea',GradientType=0 ); /* IE6-9 */
+}
+/* reset 초기화 */
+h1,h2,h3,h4,h5,h6 { margin: 0; font-weight: normal;}
+ul, ol { list-style: none; margin: 0; padding: 0;}
+a { text-decoration: none; color: #333;}
+.aquarium audio {
+    width: 300px;
+}
+.aquarium .inner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+.aquarium .dynamic {
+    width: 100%;
+}
+.aquarium img {
+    display: block;
+}
+
+.bg .building, .bg .bottom, .lotte_tower,
+.seahorse_L, .seahorse_R, .wave, .seaplant,
+.bf, .wf, .crab, .r_txt, .w_txt, .bg_bottom,
+.b_txt, .lotte_logo, .jellyfish, .left_bg, .right_bg,
+.octopus, .snail, .snail_02, .two_coral, .orange_fish, .yellow_fish,
+.lobster, .y_shell, .tropical, .gold
+{position: absolute;}
+
+.aquarium .bottom {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    z-index: 40;
+}
+.aquarium .building {
+    z-index: -1;
+    left: 5%;
+    bottom:1%;
+    width: 65%;
+}
+.aquarium .tower_wrap {
+    position: absolute;
+    left: 0%;
+    bottom: 3%;
+    width: 100%;
+}
+.logo{position: relative;}
+.r_txt {
+    position: relative;
+    width: 30%; z-index: 41;
+    margin-top: 15%; left: 50%;
+    transform: translateX(-50%);
+}
+.w_txt{
+    width: 25%; z-index: 41;
+    margin-top: 1%; left: 50%;
+    transform: translateX(-50%);
+}
+.lotte_logo {
+    width: 10%;
+    top: 1%;
+    right: 1%;
+}
+.left_bg{width: 7%; left: 0; top: 10%;}
+.right_bg{top: 30%; width: 8%; right: 5%;}
+.snail{width: 3%; left: 15.5%; bottom: 44%;}
+.snail_02{width: 5%; left: 60%; bottom: 44%; transform: rotateY(-180deg);}
+.two_coral{width: 7%; top: -12%; right: 13%;}
+.y_shell{width: 3%; left: 1%; bottom: 21%; margin-bottom: 3%; z-index: 100;}
+
+
+/* Dynamic */
+.b_txt{z-index: 13;}
+.bubble_txt01 {
+    width: 4%; top: 13%; left: 24%; margin-top: -6%;
+    transform: rotate(-20deg);
+    animation: b_txt01 5s 0.5s infinite forwards;
+}
+.bubble_txt02 {
+    width: 4%; top: 15%; left: 28%; margin-top: -8%;
+    transform: rotate(20deg);
+    animation: b_txt02 5s 0.3s infinite forwards;
+}
+.bubble_txt03 {
+    width: 4%; top: 11%; left: 31%; margin-top: -5%;
+    transform: rotate(-15deg);
+    animation: b_txt03 5s 0.5s infinite forwards;
+}
+.bubble_txt04 {
+    width: 4%; top: 13%; left: 35%; margin-top: -7%;
+    transform: rotate(15deg);
+    animation: b_txt04 5s 0.3s infinite forwards;
+}
+@keyframes b_txt01 {
+    50%{top: 11%; margin-top: -8%;}
+}
+@keyframes b_txt02 {
+    50%{top: 13%; margin-top: -10%;}
+}
+@keyframes b_txt03 {
+    50%{top: 8%; margin-top: -7%;}
+}
+@keyframes b_txt04 {
+    50%{top: 11%; margin-top: -9%;}
+}
+
+.bg_bottom {
+    width: 100%;
+    bottom: 0%;
+    z-index: 40;
+}
+.seaplant {
+    width: 3%;
+    bottom: 6%;
+}
+    .seaplant_01 {
+        left: 10%; margin-bottom: 3%;
+        transform-origin: bottom;
+        animation: seaplant 12s 0.5s linear infinite;
+    }
+    .seaplant_02 {
+        left: 12%; margin-bottom: 3%;
+        transform-origin: bottom;
+        animation: seaplant 10s 0.7s linear infinite;
+    }
+    .seaplant_03 {
+        left: 90%;
+        width: 10%;
+        margin-bottom: 5%;
+        transform-origin: bottom;
+        animation: seaplant 10s 0.5s linear infinite;
+    }
+    .seaplant_04 {
+        left: 44%; margin-bottom: 0%;
+        transform-origin: bottom;
+        animation: seaplant 12s 0.5s linear infinite;
+    }
+    .seaplant_05 {
+        left: 42%; margin-bottom: 3%;
+        transform-origin: bottom;
+        animation: seaplant 10s 0.7s linear infinite;
+    }
+    .seaplant_06 {
+        left: 27%;
+        width: 10%;
+        margin-bottom: 1%;
+        transform-origin: bottom;
+        animation: seaplant 10s 0.5s linear infinite;
+    }
+    @keyframes seaplant {
+        0%{transform: rotate(0deg);}
+        25%{transform: rotate(-8deg);}
+        50%{transform: rotate(6deg);}
+        75%{transform: rotate(-8deg);}
+        100%{transform: rotate(0deg);}
+    }
+.lobster{
+    width: 5%; right: 20%; top: 20%;
+    transform: rotate(-30deg);
+    animation: lobster 5s infinite;
+}
+@keyframes lobster{
+    50%{right: 23%; top: 10%;}
+}
+.aquarium .lotte_tower {
+    position: relative; 
+    z-index: 40;
+    left: 70%;
+    bottom: 3%;
+    width: 17%;
+}
+
+.bar{
+    width: 3%; height: 90%; 
+    z-index: 40;
+    position: absolute;
+    left:77%; bottom:1%;
+    background-color: seagreen;
+    transform-origin: bottom center;
+    animation:updown 1s linear infinite alternate;
+ }
+
+@keyframes updown{
+    0%{ height:0; background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);}
+    40%{height:87%;background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);}
+    100%{height:87%; background-image: linear-gradient(120deg, #f093fb 0%, #5762f5 100%);}
+}
+.bar02{
+    width: 3%; height: 85%; 
+    z-index: 39;
+    position: absolute;
+    left:77%; bottom:1%;
+    background-color: rgb(96, 240, 240);
+    transform-origin: bottom center;
+ }
+
+.aquarium .clown {
+    position: absolute;
+    width: 5%; z-index: 12;
+    top: 10%; right: 0;
+    transform: translateY(-10%);
+    animation: move 25s linear infinite;
+    z-index: 0;
+}
+.orange_fish{
+    width: 7%; top: 15%; left: -150px;
+    animation: move02 25s 2s linear infinite;
+}
+.yellow_fish{
+    width: 7%; top: 6%;
+    animation: move02 17s linear infinite;
+}
+@keyframes move {
+    0%{right: -300px;}
+    49%{transform: rotateY(0deg);}
+    50%{right:100%; transform:rotateY(-180deg)}
+    99%{transform:rotateY(-180deg)}
+    100%{right: -300px;}
+}
+
+.aquarium .whale {
+    position: absolute;
+    z-index: 60;
+    top: 50%; left: 0;
+    transform: translateY(-50%);
+    width: 20%;
+    animation: whale 20s linear infinite;
+}
+.aquarium .whale_wink {
+    position: absolute;
+    z-index: 60;
+    top: 50%; left: 0;
+    transform: translateY(-50%);
+    width: 20%; 
+    animation: whale_wink 20s linear infinite;
+    opacity: 0;
+}
+@keyframes move02 {
+    0%{left: -500px;}
+    49%{transform: rotateY(0deg);}
+    50%{left:100%; transform:rotateY(-180deg);}
+    99%{transform:rotateY(-180deg);}
+    100%{left: -500px;}
+}
+@keyframes whale {
+    0%{left: -500px; opacity: 1;}
+    49%{transform: rotateY(0deg); opacity: 1;}
+    50%{left:100%; transform:rotateY(-180deg); opacity: 0;}
+    99%{transform:rotateY(-180deg); opacity: 0;}
+    100%{left: -500px; opacity: 1;}
+}
+@keyframes whale_wink {
+    0%{left: -500px; opacity: 0;}
+    49%{transform: rotateY(0deg); opacity: 0;}
+    50%{left:100%; transform:rotateY(-180deg); opacity: 1;}
+    99%{transform:rotateY(-180deg); opacity: 1;}
+    100%{left: -500px; opacity: 0;}
+}
+
+.seahorse_L{
+    width: 3%; bottom: 65%; left: 27%; z-index: 40;
+    animation: seahorse 2s linear infinite;
+}
+.seahorse_R{
+    width: 3%; bottom: 70%; left: 22%; z-index: 40;
+    animation: seahorse 2s 0.2s linear infinite;
+}
+
+@keyframes seahorse{
+    50%{transform: translateY(70%);}
+}
+.jellyfish {
+    width: 7%; right: 7%; top: 40%;
+    animation: jellyfish 5s 0.2s linear infinite;
+}
+@keyframes jellyfish{
+    50%{transform: translateY(50%);}
+}
+
+/* 뽀뽀 열대어 */
+.tropical{
+    width: 3%;
+    bottom: 90%;
+    right: 65%;
+}
+
+.left{ right: 68%; animation: tropL 3s infinite;}
+.right{ right: 60%; animation: tropR 3s infinite;} 
+
+@keyframes tropL {
+    0%{right: 68%;}
+    50%{right: 65.5%;}
+    100%{right: 68%;}
+}
+@keyframes tropR {
+    0%{right: 60%;}
+    50%{right: 62.5%;} 
+    100%{right: 60%;}
+}
+/* 뽀뽀 열대어 끝 */
+
+/* 금잉어 */
+.gold{z-index: 61;}
+
+ .right-top{
+    width:7%; bottom:100%; right: 78%;
+    transform: rotate(-20deg);
+    animation: right-top 1s infinite;
+ }
+    @keyframes right-top{
+        50%{ bottom: 94%; right:79%; }
+    }
+ .right-bottom{
+    width: 5%; bottom: 49%; right: 79.5%;
+    transform: rotate(15deg);
+    animation: right-bottom 0.7s 0.2s infinite;
+ }
+    @keyframes right-bottom{
+        50%{ bottom: 48.5%; right:78.5%; }
+    }
+ .left-top{
+    width: 2%; bottom: 100%; right: 91.5%;
+    transform: rotate(15deg);
+    animation: left-top 0.7s 0.5s infinite;
+ }
+    @keyframes left-top{
+        50%{ bottom: 99%; right:90.5%; }
+    }
+
+ .left-bottom{width: 3%; bottom: 60%; right: 91.5%;
+    transform: rotate(-10deg);
+    animation: left-bottom 0.7s 0.7s infinite;
+}
+    @keyframes left-bottom{
+        50%{ bottom: 63%; right:90.5%; }
+    }
+/* //금잉어 끝 */
+
+.bf {
+    width: 10%;
+    top: 50%;
+    animation: move 30s linear infinite;
+}
+.wf {
+    width: 8%;
+    top: 30%;
+    animation: move02 15s linear infinite;
+}
+.crab {
+    width: 5%; right: 7%;
+    bottom: 15%;
+    margin-bottom: 5%;
+    animation: crab 5s 0.3s infinite;
+}
+@keyframes crab {
+    0%{right: 7%;}
+    50%{right: 12%; margin-bottom: 4%;}
+    100%{right: 7%;}
+}
+.octopus{
+    width: 10%; bottom: 180%; left: 17%;
+    animation: jellyfish 3s 0.2s infinite;
+}
+@keyframes octopus{
+    50%{transform: translateY(-30%);}
+}
+
+/* wave */
+.wave_wrap{position: relative; }
+.wave {animation: wave 2s infinite ease;}
+    .wave1{width: 15%; margin-bottom: 17%; bottom: 90%; left: 50%; animation: wave 2s infinite ease;}
+    .wave2{width: 15%; margin-bottom: 15%; bottom: 87%; left: 55%; animation: wave 2s 0.2s infinite ease;}
+    .wave3{width: 15%; margin-bottom: 13%; bottom: 84%; left: 45%; animation: wave 2s 0.4s infinite ease;}
+    .wave4{width: 15%; margin-bottom: 11%; bottom: 81%; left: 50%; animation: wave 2s 0.6s infinite ease;}
+    
+    .wave5{width: 15%; margin-bottom: 20%; bottom: 33%; left: 37%; animation: wave 2s 0.6s infinite ease;}
+    .wave6{width: 15%; margin-bottom: 18%; bottom: 30%; left: 33%; animation: wave 2s 0.3s infinite ease;}
+    .wave7{width: 15%; margin-bottom: 16%; bottom: 27%; left: 40%; animation: wave 2s 0.4s infinite ease;}
+    .wave8{width: 15%; margin-bottom: 14%; bottom: 24%; left: 35%; animation: wave 2s 1s infinite ease;}
+    
+    @keyframes wave{
+        50%{transform: translateX(10px);}
+    }
+
+/* bubble */
+.bubble{position: absolute; z-index: 70; width: 5%; height: 5%; bottom: 1%; animation: bubble 5s infinite;}
+
+    .bubble1{left: 10%; opacity: 0; animation-delay:0s;}
+    .bubble2{left: 70%; opacity: 0; animation-delay:0.7s;}
+    .bubble3{left: 30%; opacity: 0; animation-delay:1.4s;}
+
+    .bubble4{left: 80%; opacity: 0; animation-delay:0.5s;}
+    .bubble5{left: 50%; opacity: 0; animation-delay:0.9s;}
+    .bubble6{left: 60%; opacity: 0; animation-delay:1.5s;}
+
+    .bubble7{left: 22%; opacity: 0; animation-delay:0.3s;}
+    .bubble8{left: 35%; opacity: 0; animation-delay:0.6s;}
+    .bubble9{left: 63%; opacity: 0; animation-delay:1.2s;}
+
+    .bubble10{left: 43%; opacity: 0; animation-delay:0.4s;}
+    .bubble11{left: 17%; opacity: 0; animation-delay:0.5s;}
+    .bubble12{left: 5%; opacity: 0; animation-delay:1s;}
+    
+    @keyframes bubble{
+        0%{ transform: scale(0) translateY(0px); opacity: 0; }
+        30%{ opacity: 0.5; transform: scale(0.5) translateY(-50px);}
+        70%{ opacity: 0.5;}
+        100%{ transform: scale(1) translateY(-700px); opacity: 0; }
+    }
+
+@media screen and (min-width:1500px){
+    .aquarium .tower_wrap {
+        position: absolute;
+        left: 19%;
+        bottom: 7%;
+        width: 75%;
+    }
+}
