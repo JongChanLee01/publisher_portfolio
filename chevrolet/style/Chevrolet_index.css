@@ -612,7 +612,7 @@ footer li {display: inline-block;}
     .footer_top .footer_inner{
         display: block;
     }
-    .footer_top_left li{font-size: 1px;}
+    .footer_top_left li{font-size: 11px;}
     .footer_top_right{margin-top: 20px; text-align: center;}
 }
 @media screen and (max-width:360px){
